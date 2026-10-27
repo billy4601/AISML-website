@@ -7,8 +7,9 @@
   <meta name="description" content="驗證文件查詢：AISML 網站原型，內容整理中。">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#223F92">
-  <link rel="stylesheet" href="../../assets/style.css?v=261027-7">
+  <link rel="stylesheet" href="../../assets/style.css?v=261027-8">
   <script src="../../assets/navigation.js" defer></script>
+  <script src="../../assets/certificates.js?v=261027-8" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要內容</a>
@@ -50,6 +51,28 @@
       <div class="wrap">
         <h1 id="page-title">驗證文件查詢</h1>
         <p class="lead">內容整理中。</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap prose">
+        <div class="cert-search" data-cert-search data-count="顯示 {shown} 筆，共 {total} 筆">
+          <div class="cert-controls" role="search">
+            <label class="cert-field cert-query"><span>搜尋</span><input type="search" name="q" placeholder="證書編號、組織名稱、範圍或場所" autocomplete="off"></label>
+            <label class="cert-field"><span>驗證標準</span><select name="standard"><option value="">全部</option></select></label>
+            <label class="cert-field"><span>狀態</span><select name="status"><option value="">全部</option><option value="valid">有效</option><option value="suspended">暫停</option><option value="withdrawn">撤銷</option><option value="expired">逾期</option></select></label>
+            <button type="button" class="button secondary" data-reset>清除條件</button>
+          </div>
+          <p class="cert-count" aria-live="polite" data-count-output></p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="證書清單，可左右捲動">
+            <table class="data-table cert-table">
+              <thead><tr><th scope="col">證書編號</th><th scope="col">組織名稱</th><th scope="col">驗證標準</th><th scope="col">驗證範圍</th><th scope="col">驗證場所</th><th scope="col">發證日期</th><th scope="col">有效期限</th><th scope="col">狀態</th><th scope="col">驗證機構</th><th scope="col">認證機構</th></tr></thead>
+              <tbody>
+
+                <tr class="cert-empty" data-empty><td colspan="10" data-empty-text="目前無資料" data-nomatch-text="沒有符合條件的證書">目前無資料</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   </main>

@@ -183,3 +183,18 @@ html:lang(en) body { line-height: 1.65; }
 .contact-list { display: grid; grid-template-columns: auto 1fr; gap: 12px 24px; margin: 0; }
 .contact-list dt { color: var(--muted); font: 600 14px/1.8 var(--mono); }
 .contact-list dd { margin: 0; }
+
+/* Certificate directory */
+.cert-controls { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px; margin-bottom: 8px; padding: 20px; border: 1px solid var(--light); border-radius: var(--radius); background: var(--tint); }
+.cert-field { display: grid; gap: 6px; min-width: 180px; color: var(--band); font-size: 15px; font-weight: 600; }
+.cert-query { flex: 1 1 320px; }
+.cert-field input, .cert-field select { min-height: 48px; padding: 0 12px; border: 1px solid var(--muted); border-radius: var(--radius); background: var(--background); color: var(--ink); font: 400 16px/1.4 var(--font); }
+.cert-count { margin: 12px 0; color: var(--muted); font-size: 15px; }
+.cert-table { min-width: 1100px; font-size: 15px; }
+.cert-table tbody th { background: transparent; padding: 14px 16px; border-bottom: 1px solid var(--light); color: var(--band); font: 600 14px/1.6 var(--mono); text-align: left; white-space: nowrap; vertical-align: top; }
+.cert-table td:nth-child(3) { white-space: nowrap; }
+.cert-table td:nth-child(6), .cert-table td:nth-child(7) { font-family: var(--mono); font-size: 14px; white-space: nowrap; }
+.status { font-weight: 700; white-space: nowrap; }
+.status-valid { color: var(--primary); }
+.status-suspended, .status-withdrawn, .status-expired { color: var(--muted); }
+.cert-empty td { padding: 40px 16px; color: var(--muted); text-align: center; }

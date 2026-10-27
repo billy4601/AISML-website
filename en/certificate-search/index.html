@@ -7,8 +7,9 @@
   <meta name="description" content="Certificate Search: AISML website prototype. Content in preparation.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#223F92">
-  <link rel="stylesheet" href="../../assets/style.css?v=261027-7">
+  <link rel="stylesheet" href="../../assets/style.css?v=261027-8">
   <script src="../../assets/navigation.js" defer></script>
+  <script src="../../assets/certificates.js?v=261027-8" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -50,6 +51,28 @@
       <div class="wrap">
         <h1 id="page-title">Certificate Search</h1>
         <p class="lead">Content in preparation.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap prose">
+        <div class="cert-search" data-cert-search data-count="Showing {shown} of {total}">
+          <div class="cert-controls" role="search">
+            <label class="cert-field cert-query"><span>Search</span><input type="search" name="q" placeholder="Certificate no., organization, scope or site" autocomplete="off"></label>
+            <label class="cert-field"><span>Standard</span><select name="standard"><option value="">All</option></select></label>
+            <label class="cert-field"><span>Status</span><select name="status"><option value="">All</option><option value="valid">Valid</option><option value="suspended">Suspended</option><option value="withdrawn">Withdrawn</option><option value="expired">Expired</option></select></label>
+            <button type="button" class="button secondary" data-reset>Clear filters</button>
+          </div>
+          <p class="cert-count" aria-live="polite" data-count-output></p>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Certificate list, scrolls horizontally">
+            <table class="data-table cert-table">
+              <thead><tr><th scope="col">Certificate No.</th><th scope="col">Organization</th><th scope="col">Standard</th><th scope="col">Scope</th><th scope="col">Site</th><th scope="col">Issued</th><th scope="col">Expires</th><th scope="col">Status</th><th scope="col">Certification Body</th><th scope="col">Accreditation Body</th></tr></thead>
+              <tbody>
+
+                <tr class="cert-empty" data-empty><td colspan="10" data-empty-text="No certificates yet" data-nomatch-text="No certificates match these filters">No certificates yet</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   </main>
