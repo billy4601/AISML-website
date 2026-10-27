@@ -43,12 +43,6 @@ html:lang(en) body { line-height: 1.65; }
 .lang-switch a:hover { color: #FFFFFF; text-decoration: underline; }
 .lang-switch a[aria-current="page"] { color: #FFFFFF; font-weight: 700; box-shadow: inset 0 -2px 0 var(--accent); }
 
-/* Root language gate */
-.lang-gate { display: grid; place-items: center; text-align: center; background-image: radial-gradient(var(--light) 1px, transparent 1px); background-size: 24px 24px; }
-.lang-gate h1 { margin: 0 0 32px; color: var(--band); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; letter-spacing: .06em; }
-.lang-choices { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 0; padding: 0; list-style: none; }
-.lang-choices .button { min-width: 160px; }
-
 /* Header */
 .site-header { position: relative; z-index: 10; background: var(--background); border-bottom: 1px solid var(--light); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; }
