@@ -168,18 +168,23 @@ html:lang(en) body { line-height: 1.65; }
 .reports-table th:nth-child(5) { width: 12%; }
 
 /* Generated page body (Markdown). Headings start at h2; h1 is the page title. */
-.prose { max-width: 1240px; }
+/* Reading column: centered, text stays left-aligned. Wide pages (certificate directory) keep the full width. */
+.prose { max-width: calc(880px + 2 * var(--gutter)); }
+.prose.wide { max-width: 1240px; }
+.page-head:not(.wide) .wrap { max-width: calc(880px + 2 * var(--gutter)); }
 .prose > :first-child { margin-top: 0; }
 .prose h2 { margin: 56px 0 16px; color: var(--band); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.35; }
 .prose h3 { margin: 40px 0 12px; color: var(--band); font-size: 1.25rem; line-height: 1.4; }
-.prose p, .prose ul, .prose ol { max-width: 40em; }
+.prose p, .prose ul, .prose ol { max-width: none; }
 .prose li + li { margin-top: 4px; }
 .prose li::marker { color: var(--primary); }
-.prose blockquote { max-width: 40em; margin: 24px 0; padding: 12px 20px; border-left: 4px solid var(--primary); background: var(--tint); }
+.prose blockquote { margin: 24px 0; padding: 12px 20px; border-left: 4px solid var(--primary); background: var(--tint); }
 .prose code { padding: 1px 6px; border-radius: 4px; background: var(--tint); color: var(--band); font: 0.9em var(--mono); }
 .prose .table-scroll { margin: 24px 0; }
-.figure { margin: 32px 0; padding: 24px; border: 1px solid var(--light); border-radius: var(--radius); background: var(--background); }
+.figure { margin: 32px 0; padding: 24px; overflow-x: auto; border: 1px solid var(--light); border-radius: var(--radius); background: var(--background); }
 .figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+/* On narrow screens shrink a figure to no less than 75% of its natural width; scroll inside the frame beyond that. */
+.figure img[style*="--w"] { width: min(var(--w), max(100%, calc(var(--w) * 0.75))); max-width: none; }
 .contact-list { display: grid; grid-template-columns: auto 1fr; gap: 12px 24px; margin: 0; }
 .contact-list dt { color: var(--muted); font: 600 14px/1.8 var(--mono); }
 .contact-list dd { margin: 0; }
