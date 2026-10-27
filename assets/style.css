@@ -198,3 +198,24 @@ html:lang(en) body { line-height: 1.65; }
 .status-valid { color: var(--primary); }
 .status-suspended, .status-withdrawn, .status-expired { color: var(--muted); }
 .cert-empty td { padding: 40px 16px; color: var(--muted); text-align: center; }
+
+/* Stack mode (after Filament Group's Tablesaw "stack"): below the width the 10-column table needs,
+   each certificate becomes a card of label/value rows. Labels come from data-label. */
+@media (max-width: 1195px) {
+  .cert-search .table-scroll { overflow: visible; }
+  .cert-table { min-width: 0; }
+  .cert-table thead tr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  .cert-table, .cert-table tbody { display: block; }
+  .cert-table tbody { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; }
+  .cert-table tbody tr { display: block; padding: 8px 16px; border: 1px solid var(--light); border-radius: var(--radius); background: var(--background); }
+  .cert-table tbody tr[hidden] { display: none; }
+  .cert-table tbody th, .cert-table tbody td { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--rule); white-space: normal; }
+  .cert-table tbody tr > :last-child { border-bottom: 0; }
+  .cert-table tbody th { border-bottom: 2px solid var(--primary); font-size: 15px; }
+  .cert-table [data-label]::before { content: attr(data-label); color: var(--muted); font: 600 14px/1.6 var(--font); }
+  .cert-table .cert-empty { grid-column: 1 / -1; }
+  .cert-table .cert-empty td { display: block; border: 0; }
+}
+@media (max-width: 700px) {
+  .cert-field { flex: 1 1 100%; }
+}

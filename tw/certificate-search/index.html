@@ -65,11 +65,11 @@
           </div>
           <p class="cert-count" aria-live="polite" data-count-output></p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="證書清單，可左右捲動">
-            <table class="data-table cert-table">
-              <thead><tr><th scope="col">證書編號</th><th scope="col">組織名稱</th><th scope="col">驗證標準</th><th scope="col">驗證範圍</th><th scope="col">驗證場所</th><th scope="col">發證日期</th><th scope="col">有效期限</th><th scope="col">狀態</th><th scope="col">驗證機構</th><th scope="col">認證機構</th></tr></thead>
-              <tbody>
+            <table class="data-table cert-table" role="table">
+              <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">證書編號</th><th scope="col" role="columnheader">組織名稱</th><th scope="col" role="columnheader">驗證標準</th><th scope="col" role="columnheader">驗證範圍</th><th scope="col" role="columnheader">驗證場所</th><th scope="col" role="columnheader">發證日期</th><th scope="col" role="columnheader">有效期限</th><th scope="col" role="columnheader">狀態</th><th scope="col" role="columnheader">驗證機構</th><th scope="col" role="columnheader">認證機構</th></tr></thead>
+              <tbody role="rowgroup">
 
-                <tr class="cert-empty" data-empty><td colspan="10" data-empty-text="目前無資料" data-nomatch-text="沒有符合條件的證書">目前無資料</td></tr>
+                <tr role="row" class="cert-empty" data-empty><td role="cell" colspan="10" data-empty-text="目前無資料" data-nomatch-text="沒有符合條件的證書">目前無資料</td></tr>
               </tbody>
             </table>
           </div>

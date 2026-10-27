@@ -65,11 +65,11 @@
           </div>
           <p class="cert-count" aria-live="polite" data-count-output></p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="認証書一覧（横にスクロールできます）">
-            <table class="data-table cert-table">
-              <thead><tr><th scope="col">認証番号</th><th scope="col">組織名</th><th scope="col">規格</th><th scope="col">認証範囲</th><th scope="col">所在地</th><th scope="col">発行日</th><th scope="col">有効期限</th><th scope="col">状態</th><th scope="col">認証機関</th><th scope="col">認定機関</th></tr></thead>
-              <tbody>
+            <table class="data-table cert-table" role="table">
+              <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">認証番号</th><th scope="col" role="columnheader">組織名</th><th scope="col" role="columnheader">規格</th><th scope="col" role="columnheader">認証範囲</th><th scope="col" role="columnheader">所在地</th><th scope="col" role="columnheader">発行日</th><th scope="col" role="columnheader">有効期限</th><th scope="col" role="columnheader">状態</th><th scope="col" role="columnheader">認証機関</th><th scope="col" role="columnheader">認定機関</th></tr></thead>
+              <tbody role="rowgroup">
 
-                <tr class="cert-empty" data-empty><td colspan="10" data-empty-text="現在データはありません" data-nomatch-text="条件に一致する認証書はありません">現在データはありません</td></tr>
+                <tr role="row" class="cert-empty" data-empty><td role="cell" colspan="10" data-empty-text="現在データはありません" data-nomatch-text="条件に一致する認証書はありません">現在データはありません</td></tr>
               </tbody>
             </table>
           </div>
