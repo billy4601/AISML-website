@@ -133,8 +133,8 @@ html:lang(en) body { line-height: 1.65; }
   .topics { grid-template-columns: 1fr 1fr; }
 }
 
-/* Five nav items in en/jp need ~900px; switch to the menu before labels wrap. */
-@media (max-width: 900px) {
+/* Six nav items: en needs ~1135px, jp ~970px, tw ~790px (measured); switch to the menu before overflow. */
+@media (max-width: 1160px) {
   .desktop-nav { display: none; }
   .mobile-menu { display: block; position: relative; }
   .mobile-menu summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; color: var(--band); font-weight: 600; list-style: none; }
@@ -154,3 +154,15 @@ html:lang(en) body { line-height: 1.65; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Data tables (reports list). Scroll inside the wrapper on narrow screens, never the page. */
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.table-scroll { overflow-x: auto; }
+.data-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 16px; }
+.data-table th { padding: 14px 16px; border-bottom: 2px solid var(--primary); background: var(--tint); color: var(--band); font-weight: 700; text-align: left; white-space: nowrap; }
+.data-table td { padding: 14px 16px; border-bottom: 1px solid var(--light); vertical-align: top; }
+.page-head + .section { padding-top: 56px; }
+.reports-table th:nth-child(1) { width: 16%; }
+.reports-table th:nth-child(3) { width: 14%; }
+.reports-table th:nth-child(4) { width: 10%; }
+.reports-table th:nth-child(5) { width: 12%; }
