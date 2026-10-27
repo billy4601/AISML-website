@@ -45,10 +45,18 @@ html:lang(en) body { line-height: 1.65; }
 
 /* Header */
 .site-header { position: relative; z-index: 10; background: var(--background); border-bottom: 1px solid var(--light); }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--band); font-size: 24px; font-weight: 800; letter-spacing: .06em; text-decoration: none; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; padding-block: 10px; }
+/* Brand lockup: AISML wordmark with the university and department beneath (text only; no school logo). */
+.brand { display: inline-grid; gap: 4px; color: var(--band); text-decoration: none; }
+.brand-word { font-size: 24px; font-weight: 800; letter-spacing: .06em; line-height: 1; }
+.brand-affiliation { display: flex; flex-wrap: wrap; gap: 0 .5em; color: var(--muted); font-size: 13px; font-weight: 500; letter-spacing: .04em; line-height: 1.35; }
+:lang(en) .brand-affiliation { display: grid; gap: 0; font-size: 12px; letter-spacing: 0; }
+.brand-affiliation span { white-space: nowrap; }
+@media (max-width: 480px) {
+  :lang(en) .brand-affiliation { font-size: 11px; }
+}
 .brand-mark { display: block; width: 26px; height: 26px; }
-.desktop-nav { display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 500; }
+.desktop-nav { display: flex; align-items: center; gap: 24px; font-size: 15px; font-weight: 500; }
 .desktop-nav a { display: inline-flex; white-space: nowrap; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; }
 .desktop-nav a:hover { color: var(--primary); text-decoration: underline; }
 .desktop-nav a.button { color: #FFFFFF; text-decoration: none; }
@@ -124,7 +132,9 @@ html:lang(en) body { line-height: 1.65; }
 .site-footer { background: var(--band); color: #FFFFFF; font-size: 15px; --focus: var(--label); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-block: 40px; }
 .site-footer p { margin: 0; }
-.site-footer .brand { color: #FFFFFF; font-size: 20px; }
+.footer-brand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.footer-brand .brand-word { font-size: 20px; }
+.footer-affiliation { color: var(--light); }
 .site-footer .note { color: var(--light); }
 
 @media (max-width: 960px) {
@@ -133,8 +143,8 @@ html:lang(en) body { line-height: 1.65; }
   .topics { grid-template-columns: 1fr 1fr; }
 }
 
-/* Six nav items: en needs ~1135px, jp ~970px, tw ~790px (measured); switch to the menu before overflow. */
-@media (max-width: 1160px) {
+/* Six nav items plus the affiliation lockup: en needs ~1221px, jp ~1035px, tw ~840px (measured); switch to the menu before overflow. */
+@media (max-width: 1239px) {
   .desktop-nav { display: none; }
   .mobile-menu { display: block; position: relative; }
   .mobile-menu summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; color: var(--band); font-weight: 600; list-style: none; }
