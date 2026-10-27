@@ -7,36 +7,44 @@
   <meta name="description" content="AISML 網站原型，內容整理中。">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#223F92">
-  <link rel="stylesheet" href="assets/style.css?v=261027-3">
+  <link rel="stylesheet" href="assets/style.css?v=261027-4">
   <script src="assets/navigation.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要內容</a>
-  <header class="site-header wrap">
-    <a class="brand" href="index.html" aria-label="AISML，回到首頁">AISML</a>
-    <nav class="desktop-nav" aria-label="主要導覽">
-      <a href="#contact">聯絡我們</a>
-    </nav>
-    <details class="mobile-menu">
-      <summary>選單 <span aria-hidden="true">＋</span></summary>
-      <nav aria-label="行動版主要導覽">
-        <a href="#contact">聯絡我們</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="AISML，回到首頁">AISML</a>
+      <nav class="desktop-nav" aria-label="主要導覽">
+        <a class="button" href="#contact">聯絡我們</a>
       </nav>
-    </details>
+      <details class="mobile-menu">
+        <summary>選單 <span aria-hidden="true">＋</span></summary>
+        <nav aria-label="行動版主要導覽">
+          <a href="#contact">聯絡我們</a>
+        </nav>
+      </details>
+    </div>
   </header>
   <main id="main">
-    <section class="hero wrap">
-      <h1>AISML</h1>
-      <p>網站內容整理中。</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <h1 id="hero-title">AISML</h1>
+          <p class="lead">網站內容整理中。</p>
+        </div>
+      </div>
     </section>
-    <section class="wrap" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">聯絡我們</h2>
-      <p>Email：待提供</p>
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <h2 id="contact-title">聯絡我們</h2>
+        <dl><dt>EMAIL</dt><dd class="pending">待提供</dd></dl>
+      </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>AISML</p>
+      <p class="brand">AISML</p>
     </div>
   </footer>
 </body>
