@@ -244,6 +244,7 @@ img, svg { max-width: 100%; }
 .footer-id { display: grid; gap: 6px; }
 .footer-brand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; font-size: 14px; color: var(--ink); }
 .footer-brand .brand-word { font-size: 14px; }
+.footer-contact { font-style: normal; line-height: 1.7; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .footer-nav a { color: var(--ink-2); }
 
