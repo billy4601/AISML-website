@@ -7,7 +7,7 @@
   <meta name="description" content="Verify the certification status of certificates issued by AISML and other certification bodies by certificate number, organization name, scope or site.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#223F92">
-  <link rel="stylesheet" href="../../assets/style.css?v=261029-3">
+  <link rel="stylesheet" href="../../assets/style.css?v=261029-4">
   <script src="../../assets/navigation.js" defer></script>
   <script src="../../assets/certificates.js?v=261028-1" defer></script>
 </head>
@@ -76,6 +76,25 @@
           </div>
         </div>
       </div>
+    </section>
+    <section id="status" class="band band--gray" aria-labelledby="status-title">
+    <div class="container">
+    <div class="section-head">
+    <h2 id="status-title" class="headline">Certification status</h2>
+    <p class="intro" style="margin-left: 0">Certification status changes in accordance with certification decisions and is updated in the list above.</p>
+    </div>
+    <div class="state-map">
+    <div class="state-chain"><span class="chip chip--valid">Valid</span><span class="state-edge">Nonconformity, refused surveillance audit, misuse of certificate or mark, etc.</span><span class="chip chip--suspended">Suspended</span><span class="state-edge">Cause not resolved within the set time frame</span><span class="chip">Withdrawn</span></div>
+    <div class="state-chain"><span class="chip chip--valid">Valid</span><span class="state-edge">Validity ends without completed recertification</span><span class="chip">Expired</span></div>
+    <p class="state-note">Certification may also be withdrawn directly for a serious breach of requirements or when its validity cannot be maintained.</p>
+    </div>
+    <div class="grid grid--4">
+    <div class="tile tile--white"><span class="chip chip--valid">Valid</span><p>Granted, maintained or renewed: the management system continues to conform to requirements and remains effective.</p></div>
+    <div class="tile tile--white"><span class="chip chip--suspended">Suspended</span><p>Persistent or serious failure to meet requirements, failure to allow surveillance audits, misuse of the certificate or mark, or similar; during suspension, the certification may not be claimed as valid.</p></div>
+    <div class="tile tile--white"><span class="chip">Withdrawn</span><p>The cause of suspension is not resolved within the set time frame, there is a serious breach of requirements, or the validity of certification cannot be maintained.</p></div>
+    <div class="tile tile--white"><span class="chip">Expired</span><p>The certificate’s period of validity ends without recertification having been completed.</p></div>
+    </div>
+    </div>
     </section>
   </main>
   <footer class="site-footer">

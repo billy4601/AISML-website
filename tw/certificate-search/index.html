@@ -7,7 +7,7 @@
   <meta name="description" content="依證書編號、組織名稱、範圍或場所，確認 AISML 及其他驗證機構證書之驗證狀態。">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#223F92">
-  <link rel="stylesheet" href="../../assets/style.css?v=261029-3">
+  <link rel="stylesheet" href="../../assets/style.css?v=261029-4">
   <script src="../../assets/navigation.js" defer></script>
   <script src="../../assets/certificates.js?v=261028-1" defer></script>
 </head>
@@ -75,6 +75,25 @@
           </div>
         </div>
       </div>
+    </section>
+    <section id="status" class="band band--gray" aria-labelledby="status-title">
+    <div class="container">
+    <div class="section-head">
+    <h2 id="status-title" class="headline">驗證狀態</h2>
+    <p class="intro" style="margin-left: 0">驗證狀態依驗證決定變更，並同步更新於上方清單。</p>
+    </div>
+    <div class="state-map">
+    <div class="state-chain"><span class="chip chip--valid">有效</span><span class="state-edge">未符合要求、未接受追查稽核、誤用證書或標誌等</span><span class="chip chip--suspended">暫時中止</span><span class="state-edge">期限內未消除原因</span><span class="chip">終止</span></div>
+    <div class="state-chain"><span class="chip chip--valid">有效</span><span class="state-edge">期滿未完成重新驗證</span><span class="chip">到期</span></div>
+    <p class="state-note">重大違反要求或無法維持驗證有效性時，亦可直接終止。</p>
+    </div>
+    <div class="grid grid--4">
+    <div class="tile tile--white"><span class="chip chip--valid">有效</span><p>授與、維持或更新：管理系統持續符合要求並維持有效。</p></div>
+    <div class="tile tile--white"><span class="chip chip--suspended">暫時中止</span><p>持續或嚴重未符合要求、未接受追查稽核、誤用證書或標誌等；期間不得宣稱其驗證有效。</p></div>
+    <div class="tile tile--white"><span class="chip">終止</span><p>暫時中止原因未於期限內消除、重大違反要求或無法維持驗證有效性。</p></div>
+    <div class="tile tile--white"><span class="chip">到期</span><p>證書有效期限屆滿而未完成重新驗證。</p></div>
+    </div>
+    </div>
     </section>
   </main>
   <footer class="site-footer">

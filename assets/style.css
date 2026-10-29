@@ -104,8 +104,8 @@ img, svg { max-width: 100%; }
 
 /* Tiles */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min, 300px)), 1fr)); gap: 20px; }
-.grid--4 { --min: 240px; }
-.grid--5 { --min: 190px; }
+.grid--4 { --min: 210px; }
+.grid--5 { --min: 170px; }
 .grid--wide { --min: 340px; }
 .tile { display: flex; flex-direction: column; gap: 14px; padding: 40px 36px; border-radius: var(--radius-tile); background: var(--gray); }
 .tile--white { background: #FFFFFF; }
@@ -283,4 +283,61 @@ img, svg { max-width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Equal tile heights across wrapped rows (single-column phones keep natural heights) */
+@media (min-width: 701px) {
+  .grid, .steps { grid-auto-rows: 1fr; }
+}
+
+/* Process flow: numbered nodes on a connected track */
+.flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0 20px; margin: 0; padding: 0; list-style: none; }
+.flow-step { position: relative; display: flex; flex-direction: column; gap: 8px; padding-top: 76px; }
+.flow-step:not(:last-child)::before { content: ""; position: absolute; top: 27px; left: 64px; right: -12px; height: 2px; background: var(--field); }
+.flow-step:not(:last-child)::after { content: ""; position: absolute; top: 22px; right: -14px; border-left: 10px solid var(--field); border-block: 6px solid transparent; }
+.flow-num { position: absolute; top: 0; left: 0; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--primary); color: #FFFFFF; font-size: 18px; font-weight: 700; }
+.flow-title { font-size: 17px; font-weight: 700; line-height: 1.35; }
+.flow-text { font-size: 14px; line-height: 1.6; color: var(--ink-2); }
+
+/* Certification cycle timeline */
+.cycle { margin-top: 72px; padding: 48px; border-radius: var(--radius-tile); background: var(--band); color: #FFFFFF; }
+.cycle h3 { display: flex; align-items: center; gap: 16px; margin: 0; font-size: 24px; color: #FFFFFF; }
+.cycle-num { display: grid; place-items: center; flex: none; width: 56px; height: 56px; border-radius: 50%; background: var(--accent); font-size: 18px; }
+.cycle-marks { display: flex; justify-content: space-between; gap: 16px; margin-top: 40px; font-size: 13px; font-weight: 600; color: var(--label); }
+.cycle-marks span:first-child::before { content: "\25BC\00A0"; }
+.cycle-marks span:last-child::after { content: "\00A0\25BC"; }
+.cycle-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; }
+.cycle-seg { display: flex; flex-direction: column; gap: 4px; padding-top: 28px; position: relative; }
+.cycle-seg::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 12px; border-radius: 6px; background: rgba(138, 208, 244, 0.35); }
+.cycle-seg--recert::before { background: var(--accent); }
+.cycle-year { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: var(--label); }
+.cycle-label { font-size: 18px; font-weight: 700; }
+.cycle-sub { font-size: 14px; color: var(--light); }
+.cycle-note { margin: 32px 0 0; padding-top: 24px; border-top: 1px solid rgba(204, 212, 234, 0.25); font-size: 15px; color: var(--light); }
+
+/* Certification status transitions */
+.state-map { display: grid; gap: 16px; margin-bottom: 40px; }
+.state-chain { display: flex; align-items: center; gap: 16px; padding: 28px 32px; border-radius: var(--radius-card); background: #FFFFFF; }
+.state-chain .chip { flex: none; align-self: center; padding: 8px 18px; font-size: 15px; }
+.state-edge { position: relative; flex: 1; min-width: 0; padding-bottom: 18px; font-size: 13px; line-height: 1.45; text-align: center; color: var(--muted); }
+.state-edge::before { content: ""; position: absolute; bottom: 5px; left: 0; right: 8px; height: 2px; background: var(--field); }
+.state-edge::after { content: ""; position: absolute; bottom: 0; right: 0; border-left: 10px solid var(--field); border-block: 6px solid transparent; }
+.state-note { margin: 0; font-size: 14px; color: var(--muted); }
+
+@media (max-width: 1023px) {
+  .flow { grid-template-columns: 1fr; }
+  .flow-step { min-height: 56px; padding: 0 0 36px 80px; }
+  .flow-step:not(:last-child)::before { top: 64px; bottom: 12px; left: 27px; right: auto; width: 2px; height: auto; }
+  .flow-step:not(:last-child)::after { top: auto; bottom: 4px; left: 22px; right: auto; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 10px solid var(--field); border-bottom: 0; }
+  .flow-title { padding-top: 14px; }
+}
+@media (max-width: 700px) {
+  .cycle { margin-top: 56px; padding: 32px 24px; }
+  .cycle-track { grid-template-columns: 1fr; gap: 20px; }
+  .cycle-seg { padding: 0 0 0 24px; }
+  .cycle-seg::before { top: 0; bottom: 0; right: auto; width: 8px; height: auto; }
+  .state-chain { flex-direction: column; padding: 24px; }
+  .state-edge { width: 100%; padding: 4px 0 28px; }
+  .state-edge::before { bottom: 6px; left: 50%; right: auto; width: 2px; height: 16px; }
+  .state-edge::after { left: calc(50% - 5px); right: auto; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 10px solid var(--field); border-bottom: 0; }
 }
