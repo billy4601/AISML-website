@@ -105,6 +105,8 @@ img, svg { max-width: 100%; }
 /* Tiles */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min, 300px)), 1fr)); gap: 20px; }
 .grid--4 { --min: 240px; }
+.grid--5 { --min: 190px; }
+.grid--5 .std { font-size: 20px; white-space: nowrap; }
 .grid--wide { --min: 340px; }
 .tile { display: flex; flex-direction: column; gap: 14px; padding: 40px 36px; border-radius: var(--radius-tile); background: var(--gray); }
 .tile--white { background: #FFFFFF; }
