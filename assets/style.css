@@ -42,8 +42,9 @@ img, svg { max-width: 100%; }
 
 /* Language bar */
 .utility { background: var(--band); font-size: 12px; --focus: var(--label); }
-.utility .wrap { display: flex; justify-content: flex-end; }
-.lang-switch { display: flex; gap: 4px; }
+.utility .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.translation-note { margin: 0; color: var(--light); }
+.lang-switch { display: flex; gap: 4px; margin-left: auto; }
 .lang-switch a { display: inline-flex; align-items: center; min-height: 32px; padding: 0 8px; color: var(--light); }
 .lang-switch a[aria-current="page"] { color: #FFFFFF; font-weight: 600; }
 
@@ -93,6 +94,10 @@ img, svg { max-width: 100%; }
 .icon-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; align-items: end; max-width: 880px; margin: 80px auto 0; }
 .icon-tile { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: var(--radius-tile); background: var(--gray); }
 .icon-tile .icon { width: 48px; height: 48px; }
+.icon-tile { flex-direction: column; gap: 12px; }
+.icon-label { padding-inline: 6px; color: var(--band); font-size: 14px; font-weight: 600; line-height: 1.25; text-align: center; overflow-wrap: anywhere; }
+.icon-tile--hero .icon-label { color: #FFFFFF; }
+:lang(ja) .icon-label, .phrase { word-break: keep-all; overflow-wrap: normal; }
 .icon-tile--up { transform: translateY(-24px); }
 .icon-tile--hero { background: var(--band); transform: translateY(-48px) scale(1.12); }
 .icon-tile--hero .icon { width: 56px; height: 56px; color: #FFFFFF; }
@@ -263,6 +268,9 @@ img, svg { max-width: 100%; }
   .icon-row { gap: 10px; margin-top: 56px; }
   .icon-tile { border-radius: 18px; }
   .icon-tile .icon { width: 28px; height: 28px; }
+  .icon-tile { gap: 6px; }
+  .icon-label { padding-inline: 2px; font-size: 10px; }
+  :lang(ja) .icon-label { font-size: 9px; }
   .icon-tile--hero .icon { width: 34px; height: 34px; }
   .icon-tile--up { transform: translateY(-12px); }
   .icon-tile--hero { transform: translateY(-24px) scale(1.1); }
