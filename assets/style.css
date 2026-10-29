@@ -341,3 +341,5 @@ img, svg { max-width: 100%; }
   .state-edge::before { bottom: 6px; left: 50%; right: auto; width: 2px; height: 16px; }
   .state-edge::after { left: calc(50% - 5px); right: auto; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 10px solid var(--field); border-bottom: 0; }
 }
+.state-map + .grid .tile { padding: 28px 24px; }
+.state-map + .grid .tile p { font-size: 15px; line-height: 1.6; }

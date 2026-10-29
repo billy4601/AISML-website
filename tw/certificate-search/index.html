@@ -80,16 +80,18 @@
     <div class="container">
     <div class="section-head">
     <h2 id="status-title" class="headline">驗證狀態</h2>
-    <p class="intro" style="margin-left: 0">驗證狀態依驗證決定變更，並同步更新於上方清單。</p>
+    <p class="intro" style="margin-left: 0">驗證狀態依驗證決定變更，並同步更新於上方清單。增列或減列驗證範圍，須經申請審查、稽核活動及證據足以支持範圍變更後始作成決定，並同步更新證書。</p>
     </div>
     <div class="state-map">
     <div class="state-chain"><span class="chip chip--valid">有效</span><span class="state-edge">未符合要求、未接受追查稽核、誤用證書或標誌等</span><span class="chip chip--suspended">暫時中止</span><span class="state-edge">期限內未消除原因</span><span class="chip">終止</span></div>
+    <div class="state-chain"><span class="chip chip--suspended">暫時中止</span><span class="state-edge">原因已消除並經查證</span><span class="chip chip--valid">恢復</span></div>
     <div class="state-chain"><span class="chip chip--valid">有效</span><span class="state-edge">期滿未完成重新驗證</span><span class="chip">到期</span></div>
     <p class="state-note">重大違反要求或無法維持驗證有效性時，亦可直接終止。</p>
     </div>
-    <div class="grid grid--4">
+    <div class="grid grid--5">
     <div class="tile tile--white"><span class="chip chip--valid">有效</span><p>授與、維持或更新：管理系統持續符合要求並維持有效。</p></div>
     <div class="tile tile--white"><span class="chip chip--suspended">暫時中止</span><p>持續或嚴重未符合要求、未接受追查稽核、誤用證書或標誌等；期間不得宣稱其驗證有效。</p></div>
+    <div class="tile tile--white"><span class="chip chip--valid">恢復</span><p>造成暫時中止之原因已消除，並已查證足以支持恢復之證據；必要時執行特殊稽核或補充審查。</p></div>
     <div class="tile tile--white"><span class="chip">終止</span><p>暫時中止原因未於期限內消除、重大違反要求或無法維持驗證有效性。</p></div>
     <div class="tile tile--white"><span class="chip">到期</span><p>證書有效期限屆滿而未完成重新驗證。</p></div>
     </div>

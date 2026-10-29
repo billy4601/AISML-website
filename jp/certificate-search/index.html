@@ -81,16 +81,18 @@
     <div class="container">
     <div class="section-head">
     <h2 id="status-title" class="headline">認証の状態</h2>
-    <p class="intro" style="margin-left: 0">認証の状態は認証の決定に基づいて変更され、上記の一覧に反映されます。</p>
+    <p class="intro" style="margin-left: 0">認証の状態は認証の決定に基づいて変更され、上記の一覧に反映されます。認証範囲の拡大または縮小は、申請のレビュー、審査活動および証拠によって変更が裏付けられた場合にのみ決定し、認証書も更新します。</p>
     </div>
     <div class="state-map">
     <div class="state-chain"><span class="chip chip--valid">有効</span><span class="state-edge">要求事項への不適合、サーベイランス審査の拒否、認証書またはマークの誤用など</span><span class="chip chip--suspended">一時停止</span><span class="state-edge">期限内に原因が解消されない</span><span class="chip">取消</span></div>
+    <div class="state-chain"><span class="chip chip--suspended">一時停止</span><span class="state-edge">原因が解消され、証拠を検証済み</span><span class="chip chip--valid">回復</span></div>
     <div class="state-chain"><span class="chip chip--valid">有効</span><span class="state-edge">再認証を完了せず有効期限が満了</span><span class="chip">期限切れ</span></div>
     <p class="state-note">要求事項への重大な違反がある場合や認証の有効性を維持できない場合は、直接取消となることもあります。</p>
     </div>
-    <div class="grid grid--4">
+    <div class="grid grid--5">
     <div class="tile tile--white"><span class="chip chip--valid">有効</span><p>授与、維持または更新：マネジメントシステムが引き続き要求事項に適合し、有効に維持されています。</p></div>
     <div class="tile tile--white"><span class="chip chip--suspended">一時停止</span><p>要求事項への不適合が継続しているか重大である場合、サーベイランス審査を受け入れない場合、認証書またはマークを誤用した場合などです。この期間中は、認証が有効であると表明することはできません。</p></div>
+    <div class="tile tile--white"><span class="chip chip--valid">回復</span><p>一時停止の原因が解消され、回復を裏付ける証拠が検証された場合です。必要に応じて、特別審査または追加のレビューを実施します。</p></div>
     <div class="tile tile--white"><span class="chip">取消</span><p>一時停止の原因が期限内に解消されない場合、要求事項への重大な違反がある場合、または認証の有効性を維持できない場合です。</p></div>
     <div class="tile tile--white"><span class="chip">期限切れ</span><p>再認証を完了しないまま、認証書の有効期限が満了した場合です。</p></div>
     </div>
