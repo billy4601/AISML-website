@@ -99,6 +99,7 @@ img, svg { max-width: 100%; }
 .icon-label { padding-inline: 6px; color: var(--band); font-size: 14px; font-weight: 600; line-height: 1.25; text-align: center; overflow-wrap: anywhere; }
 .icon-tile--hero .icon-label { color: #FFFFFF; }
 :lang(ja) .icon-label, .phrase { word-break: keep-all; overflow-wrap: normal; }
+.subhead { text-wrap: balance; }
 .icon-tile--up { transform: translateY(-24px); }
 .icon-tile--hero { background: var(--band); transform: translateY(-48px) scale(1.12); }
 .icon-tile--hero .icon { width: 56px; height: 56px; color: #FFFFFF; }
