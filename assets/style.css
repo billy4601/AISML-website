@@ -81,6 +81,7 @@ img, svg { max-width: 100%; }
 .center { text-align: center; }
 .eyebrow { font-size: 19px; font-weight: 600; color: var(--primary); }
 .band--dark .eyebrow { color: var(--label); }
+.hero-org { margin-bottom: 8px; font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0.02em; }
 .display { font-size: clamp(56px, 9vw, 112px); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
 .title { font-size: clamp(40px, 6.4vw, 72px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; }
 .headline { font-size: clamp(32px, 5vw, 56px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; }
